@@ -1,0 +1,80 @@
+/* ...CUSTOM RESET... */
+*:focus, *:active {outline: 0;}
+html {}
+ul {list-style: none; margin: 0; padding: 0;}
+
+body {
+    font-family: "Open sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #2f2f2f;
+    background-image: url("../img2/bg.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+h1,h2,h3,h4,h5,h6 {font-family: "Roboto"; font-weight: 300; margin: 0;}
+a {
+    transition: 0.1s all linear;
+    -webkit-transition: 0.1s all linear;
+    -moz-transition: 0.1s all linear;
+    -ms-transition: 0.1s all linear;
+}
+a:hover, a:focus, a:active {text-decoration: none;}
+
+.login-box{max-width: 400px; width: 95%; margin: auto; background-color: #fff; padding: 30px 40px; margin-top: 70px;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.login-box:before, .login-box:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.login-box:after{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+        -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+        -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+.login-box h1{display: block; text-align: center; font-weight: 700; font-size: 25px;}
+.login-box span{float: right;}
+.login-box button{width: 100%; margin-top: 20px;}
+.login-box .form-signup{width: 90%; margin: auto; text-align: center; font-size: 14px; margin-top: 30px;}
+.login-box .form-signup a{background: #4a8b31; padding: 5px 10px; color: #fff; border-radius: 4px; margin-left: 10px;}
+.login-box .form-signup a:hover{background: #3b6d27;}
+
+.login-content{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.login-content{width: 95%; margin: 40px auto 30px; padding: 25px 5px; background-color: #fff;}
+.login-content .left-img{text-align: center; justify-content: center; align-items: center; display: flex; padding-left: 25px;}
+.login-content .left-img img{max-width: 250px; width: 100%;}
+.login-content .right-text{padding: 0 25px; box-shadow: -5px 0 5px -5px rgb(180, 180, 180);}
+.login-content .right-text p{font-size: 14px; line-height: 1.6em; margin-bottom: 0;}
+
+/* Media Query */
+/* HEADER */
+@media(max-width: 767px) {
+    .login-box{margin-top: 40px;}
+    .login-content .right-text{padding: 0 35px; text-align: center; margin-top: 15px; box-shadow: none;}
+    .login-content .right-text p{box-shadow: 0 -5px 5px -5px rgb(180, 180, 180); padding-top: 20px;}
+}
