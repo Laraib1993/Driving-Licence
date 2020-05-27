@@ -27,238 +27,162 @@ public class Properties
     // Insertion Area Start //
 
 
-    //insert into inword history//
-    public string AdminInsertScanningInword_Inwordno { get; set; }
-    public string AdminInsertScanningInword_Discription { get; set; }
-    public DateTime AdminInsertScanningInword_InwordDateTime { get; set; }
-    public int AdminInsertScanningInword_NoofIDs { get; set; }
-    public int AdminInsertScanningInword_NoofPages { get; set; }
-    public DateTime AdminInsertScanningInword_Createdon { get; set; }
-    public int AdminInsertScanningInword_FK_Department { get; set; }
-    public int AdminInsertScanningInword_FK_Createdby { get; set; }
-    public int AdminInsertScanningInword_FK_Reason { get; set; }
-    public int AdminInsertScanningInword_FK_Status { get; set; }
+    //insert into city //
+    public string AdminInsertcitycity { get; set; }
+    public int AdminInsertcitycountry { get; set; }
+    public int AdminInsertcitycreatedon { get; set; }
 
-    //insert into main//
-    public string AdminInsertMain_Inwordno { get; set; }
-    public DateTime AdminInsertMain_Createdon { get; set; }
-    public DateTime AdminInsertMain_InwordDateTime { get; set; }
-    public int AdminInsertMain_FK_Department { get; set; }
-    public int AdminInsertMain_FK_Createdby { get; set; }
-    public int AdminInsertMain_FK_Reason { get; set; }
+    //insert into country//
+    public string AdminInsertcountrycountry { get; set; }
+    public int AdminInsertcountrycreatedon { get; set; }
 
-    //insert into outward history//
-    public DateTime AdminInsertOutwardHistory_OutwarddateTime { get; set; }
-    public int AdminInsertOutwardHistory_FK_Reason { get; set; }
-    public int AdminInsertOutwardHistory_FK_InwordhistoryID { get; set; }
-    public int AdminInsertOutwardHistory_FK_Outwardto { get; set; }
-    public int AdminInsertOutwardHistory_FK_Outwardby { get; set; }
-    public int AdminInsertOutwardHistory_FK_Status { get; set; }
-    public string AdminUpdateOutwardHistory_FK_ReasonDoneID { get; set; }
+    //insert into delivered step//
+    public DateTime AdminInsertdelivereddeliveredon { get; set; }
+    public int AdminInsertdeliveredRider { get; set; }
+    public int AdminInsertdeliveredshipment { get; set; }
+    public int AdminInsertdeliveredcreatedby { get; set; }
 
-    //update into main for scanning//
-    public string AdminUpdateMain_Sno { get; set; }
-    public DateTime AdminUpdateMain_OutwardDateTime { get; set; }
-    public string AdminUpdateMain_OutwardBy { get; set; }
-    public int AdminUpdateMain_Outwardto { get; set; }
-    public int AdminUpdateMain_FK_Reason { get; set; }
-    public int AdminUpdateMainForScanning { get; set; }
+    //update into district//
+    public string AdminInsertdistrictdistrict { get; set; }
+    public int AdminInserdistrictcity { get; set; }
+    public int AdminInsertdistrictcreated { get; set; }
 
-    //insert into searching sheet inword//
-    public DateTime AdminInsertSearchingSheetInword_InwordDateTime { get; set; }
-    public DateTime AdminInsertSearchingSheetInword_Createdon { get; set; }
-    public int AdminInsertSearchingSheetInword_FK_OutwardHistoryID { get; set; }
-    public int AdminInsertSearchingSheetInword_FK_Reason { get; set; }
-    public int AdminInsertSearchingSheetInword_FK_Createdby { get; set; }
-    public string AdminInsertSearchingSheetInword_FK_ReasonDoneID { get; set; }
+    //insert into ongoing step//
+    public DateTime AdminInsertongoingassignedon { get; set; }
+    public DateTime AdminInsertongoingestimatedtime { get; set; }
+    public int AdminInsertongoingrider { get; set; }
+    public int AdminInsertongoingcreatedby { get; set; }
+    public int AdminInsertongoingshipment { get; set; }
 
-    //update into main for searching//
-    public string AdminUpdateMainForSearchingInword_Sno { get; set; }
-    public DateTime AdminUpdateMainForSearchingInword_InwordDateTime { get; set; }
-    public int AdminUpdateMainForSearchingInword_FK_Createdby { get; set; }
-    public int AdminUpdateMainForSearchingInword_FK_Reason { get; set; }
+    //update into return reason//
+    public string AdminInsertreasonreason { get; set; }
+    public DateTime AdminInsertreasoncreateon { get; set; }
 
-    //insert into searching sheet outward//
-    public int AdminInsertSearchingSheetOutward_NoofNewID { get; set; }
-    public int AdminInsertSearchingSheetOutward_NoofSameID { get; set; }
-    public int AdminInsertSearchingSheetOutward_NoofModification { get; set; }
-    public string AdminInsertSearchingSheetOutward_Discription { get; set; }
-    public DateTime AdminInsertSearchingSheetOutward_Createdon { get; set; }
-    public int AdminInsertSearchingSheetOutward_SearchingSheetInwordID { get; set; }
-    public int AdminInsertSearchingSheetOutward_FK_OutwardTo { get; set; }
-    public int AdminInsertSearchingSheetOutward_FK_Reason { get; set; }
-    public int AdminInsertSearchingSheetOutward_FK_Createdby { get; set; }
-    public DateTime AdminInsertSearchingSheetOutward_OutwardDateTime { get; set; }
-    public string AdminInsertSearchingSheetOutward_FK_ReasonDoneID { get; set; }
+    //insert into return step//
+    public DateTime AdminInsertreturnerturnon { get; set; }
+    public int AdminInsertreturnrider { get; set; }
+    public int AdminInsertreturncreatedby { get; set; }
+    public int AdminInsertreturnshipment { get; set; }
+    public int AdminInsertreturnreason { get; set; }
+    public string AdminInsertreturndisccription { get; set; }
 
-    //update into main for searching outward//
-    public string AdminUpdateMainForSearchingOutward_Sno { get; set; }
-    public DateTime AdminUpdateMainForSearchingOutward_OutwardDateTime { get; set; }
-    public string AdminUpdateMainForSearchingOutward_Outwardby { get; set; }
-    public int AdminUpdateMainForSearchingOutward_FK_Reason { get; set; }
+    //update into rider//
+    public string AdminInsertrider { get; set; }
+    public string AdminInsertridercnic { get; set; }
+    public string AdminInsertrideraddress { get; set; }
+    public string AdminInsertriderphone { get; set; }
+    public int AdminInsertridercreatedby { get; set; }
 
-    //insert into new id inword//
-    public DateTime AdminInsertNewIDSheetInword_Createdon { get; set; }
-    public DateTime AdminInsertNewIDSheetInword_InwordDateTime { get; set; }
-    public string AdminInsertNewIDSheetInword_Discription { get; set; }
-    public int AdminInsertNewIDSheetInword_FK_SearchingOutwardID { get; set; }
-    public int AdminInsertNewIDSheetInword_FK_Reason { get; set; }
-    public int AdminInsertNewIDSheetInword_FK_Createdby { get; set; }
-    public string AdminInsertNewIDSheetInword_FK_ReasonDoneID { get; set; }
+    //insert into shipment detail//
+    public string AdminInsertshipmentid { get; set; }
+    public string AdminInsertshipmentcnic { get; set; }
+    public int AdminInsertshipmentdistrict { get; set; }
+    public int AdminInsertshipmentcreatedby { get; set; }
+    public int AdminInsertshipmentstatus { get; set; }
+    public int AdminInsertshipmentrider { get; set; }
 
-    //update into main for new id inword//
-    public string AdminUpdateMainForNewIDInword_Sno { get; set; }
-    public DateTime AdminUpdateMainForNewIDInword_OutwardDateTime { get; set; }
-    public string AdminUpdateMainForNewIDInword_Outwardby { get; set; }
 
-    //insert into new id outward//
-    public int AdminInsertNewIDSheetOutward_Sno { get; set; }
-    public DateTime AdminInsertNewIDSheetOutward_OutwardDateTime { get; set; }
-    public DateTime AdminInsertNewIDSheetOutward_Createdon { get; set; }
-    public string AdminInsertNewIDSheetOutward_Discription { get; set; }
-    public int AdminInsertNewIDSheetOutward_FK_NewIDSheetInwordID { get; set; }
-    public int AdminInsertNewIDSheetOutward_FK_Createdby { get; set; }
-    public int AdminInsertNewIDSheetOutward_FK_Reason { get; set; }
-    public int AdminInsertNewIDSheetOutward_FK_OutwardTo { get; set; }
-    public string AdminInsertNewIDSheetOutward_FK_ReasonDoneID { get; set; }
+    //insert into user//
+    public string AdminInsertuseremail { get; set; }
+    public string AdminInsertuserpassword { get; set; }
+    public string AdminInsertuserrole { get; set; }
+
+
+    //insert into shipment entry//
+    public DateTime AdminInsertentryreceivedon { get; set; }
+    public string AdminInsertentryreceivedby { get; set; }
+    public DateTime AdminInsertentryestimatedongoingdate { get; set; }
+    public int AdminInsertentrycreatedby { get; set; }
+    public int AdminInsertentryshipment { get; set; }
+    public int AdminInsertentryrider { get; set; }
+
+   
+
+    //update into city//
+    public string AdminUpdatecitycity { get; set; }
+    public int AdminUpdatecityupdatedby { get; set; }
+    public int AdminUpdatecityID { get; set; }
+
+
+    //update into country//
+    public string AdminUpdatecountrycountry { get; set; }
+    public int AdminUpdatecountryupdatedby { get; set; }
+    public int AdminUpdatecountryID { get; set; }
+
 
     //update into main for new id outward//
-    public string AdminUpdateNewIDOutward_Sno { get; set; }
-    public DateTime AdminUpdateNewIDOutward_OutwardDateTime { get; set; }
-    public string AdminUpdateNewIDOutward_Outwardby { get; set; }
+    public DateTime AdminUpdatedeliveredon { get; set; }
+    public int AdminUpdatedeliveredrider { get; set; }
+    public int AdminUpdatedeliveredshipment { get; set; }
+    public int AdminUpdatedeliveredupdatedby { get; set; }
+    public int AdminUpdatedeliveredid { get; set; }
 
-    //insert into searching case inword//
-    public string AdminInsertSearchingCaseInword_Inwordno { get; set; }
-    public string AdminInsertSearchingCaseInword_Discription { get; set; }
-    public DateTime AdminInsertSearchingCaseInword_InwordDateTime { get; set; }
-    public DateTime AdminInsertSearchingCaseInword_Createdon { get; set; }
-    public int AdminInsertSearchingCaseInword_NoofIDs { get; set; }
-    public int AdminInsertSearchingCaseInword_NoofPages { get; set; }
-    public int AdminInsertSearchingCaseInword_FK_Createdby { get; set; }
+    //update into district//
+    public string AdminUpdatedistrictdistrict { get; set; }
+    public int AdminUpdatedistrictupdatedby { get; set; }
+    public int AdminUpdatedistrictcity { get; set; }
+    public int AdminUpdateDistrictID { get; set; }
 
-    //insert into main for searching case inword//
-    public string AdminInsertMainForSearchingCase_InwordNo { get; set; }
-    public DateTime AdminInsertMainForSearchingCase_InwordDateTime { get; set; }
-    public int AdminInsertMainForSearchingCase_FK_Createdby { get; set; }
+    //update ongoing step//
+    public int AdminUpdateongoingassignedon { get; set; }
+    public int AdminUpdateongoingestimatedon{ get; set; }
+    public int AdminUpdateongoingrider { get; set; }
+    public string AdminUpdateongoingupdateby { get; set; }
+    public string AdminUpdateongoingshipment { get; set; }
+    public string AdminUpdateongoingID { get; set; }
 
-    //insert into searching case outward//
-    public int AdminInsertSearchingCaseOutward_NoofNewID { get; set; }
-    public int AdminInsertSearchingCaseOutward_NoofSameID { get; set; }
-    public int AdminInsertSearchingCaseOutward_NoofModification { get; set; }
-    public string AdminInsertSearchingCaseOutward_Discription { get; set; }
-    public DateTime AdminInsertSearchingCaseOutward_OutwardDateTime { get; set; }
-    public DateTime AdminInsertSearchingCaseOutward_Createdon { get; set; }
-    public int AdminInsertSearchingCaseOutward_FK_SearchingCaseInwordID { get; set; }
-    public int AdminInsertSearchingCaseOutward_FK_OutwardTo { get; set; }
-    public int AdminInsertSearchingCaseOutward_FK_Createdby { get; set; }
-    public string AdminInsertSearchingCaseOutward_FK_ReasonDoneID { get; set; }
-
-    //update into main for searching case outward//
-    public int AdminUpdateMainForSearchingCaseOutward_Sno { get; set; }
-    public DateTime AdminUpdateMainForSearchingCaseOutward_OutwardDateTime { get; set; }
-    public string AdminUpdateMainForSearchingCaseOutward_OutwardBy { get; set; }
-    public int AdminUpdateMainForSearchingCaseOutward_OutwardTo { get; set; }
-
-    //insert into new id case inword//
-    public DateTime AdminInsertNewIDCaseInword_InwordDateTime { get; set; }
-    public string AdminInsertNewIDCaseInword_Discription { get; set; }
-    public int AdminInsertNewIDCaseInword_FK_SearchingOutwardCaseID { get; set; }
-    public int AdminInsertNewIDCaseInword_FK_Createdby { get; set; }
-    public string AdminInsertNewIDCaseInword_FK_ReasonDoneID { get; set; }
-
-    //update into main for new id case inword//
-    public string AdminUpdateMainForNewIDCaseInword_Sno { get; set; }
-    public DateTime AdminUpdateMainForNewIDCaseInword_InwordDateTime { get; set; }
-    public int AdminUpdateMainForNewIDCaseInword_FK_Createdby { get; set; }
-
-    //insert into new id case outward//
-
-    public DateTime AdminInsertNewIDCaseOutward_OutwardDateTime { get; set; }
-    public string AdminInsertNewIDCaseOutward_Discription { get; set; }
-    public int AdminInsertNewIDCaseOutward_FK_NewIDCaseInwordID { get; set; }
-    public int AdminInsertNewIDCaseOutward_FK_Createdby { get; set; }
-    public int AdminInsertNewIDCaseOutward_FK_OutwardTo { get; set; }
-    public string AdminInsertNewIDCaseOutward_FK_ReasonDoneID { get; set; }
-
-    //update into main for new id outward//
-    public string AdminUpdateNewIDCaseOutward_Sno { get; set; }
-    public DateTime AdminUpdateNewIDCaseOutward_OutwardDateTime { get; set; }
-    public string AdminUpdateNewIDCaseOutward_Outwardby { get; set; }
-    public int AdminUpdateNewIDCaseOutward_OutwardTo { get; set; }
-
-    //=========================//
-    public string AdminInsertOutwardForm_Outwardno { get; set; }
-    public DateTime AdminInsertOutwardForm_DateTime { get; set; }
-    public int AdminInsertOutwardForm_Createdby { get; set; }
-    public int AdminInsertOutwardForm_Status { get; set; }
+    //update into return reason//
+    public string AdminUpdatereasonreason { get; set; }
+    public int AdminUpdatereasonupdatedby { get; set; }
+    public int AdminUpdatereasonID { get; set; }
 
 
-    public int AdminInsertCompleteSheetForm_Sno { get; set; }
-    public int AdminInsertCompleteSheetForm_InwordNo { get; set; }
-    public int AdminInsertCompleteSheetForm_NoofNewID { get; set; }
-    public string AdminInsertCompleteSheetForm_Discription { get; set; }
-    public string AdminInsertCompleteSheetForm_PicName { get; set; }
-    public string AdminInsertCompleteSheetForm_PicPath { get; set; }
-    public int AdminInsertCompleteSheetForm_FkCreatedby { get; set; }
-    public int AdminInsertCompleteSheetForm_Status { get; set; }
+    //update return step//
+    public DateTime AdminUpdatereturndatetime { get; set; }
+    public int AdminUpdatereturnrider { get; set; }
+    public int AdminUpdatereturnreason { get; set; }
+    public string AdminUpdatereturnupdateby { get; set; }
+    public string AdminUpdatereturnshipment { get; set; }
+    public string AdminUpdatereturnID { get; set; }
+    public string AdminUpdatereturndescription { get; set; }
 
 
 
-
-    public int AdminInsertNewIDCaseForm_InwordNo { get; set; }
-    public int AdminInsertNewIDCaseForm_NoofNewID { get; set; }
-    public string AdminInsertNewIDCaseForm_Discription { get; set; }
-    public string AdminInsertNewIDCaseForm_PicName { get; set; }
-    public string AdminInsertNewIDCaseForm_PicPath { get; set; }
-    public int AdminInsertNewIDCaseForm_FKCreatedby { get; set; }
-    public int AdminInsertNewIDCaseForm_Status { get; set; }
-
+    //update rider//
+    public string AdminUpdateriderrider { get; set; }
+    public string AdminUpdateridercnic { get; set; }
+    public string AdminUpdaterideraddress { get; set; }
+    public string AdminUpdateriderphone { get; set; }
+    public int AdminUpdateriderupdateby { get; set; }
+    public int AdminUpdateriderID { get; set; }
 
 
-    public int AdminInsertInitialInwordFormInwordNo { get; set; }
-    public int AdminInsertInitialInwordFormFK_Deptt_ID { get; set; }
-    public DateTime AdminInsertInitialInwordFormLaunchDate { get; set; }
-    public string AdminInsertInitialInwordFormReason { get; set; }
-    public int AdminInsertInitialInwordFormNoofRecord { get; set; }
 
-    
-
-    public int AdminInsertInitialInwordCaseForm_sno { get; set; }
-    public int AdminInsertInitialInwordCaseForm_InwordNo { get; set; }
-    public int AdminInsertInitialInwordCaseForm_ReasonofInword { get; set; }
-    public DateTime AdminInsertInitialInwordCaseForm_Datetime { get; set; }
-    public int AdminInsertInitialInwordCaseForm_District { get; set; }
-    public int AdminInsertInitialInwordCaseForm_FK_Createdby { get; set; }
-    public int AdminInsertInitialInwordCaseForm_Status { get; set; }
+    //update shipment detail//
+    public string AdminUpdatshipmentshipmentID { get; set; }
+    public string AdminUpdateshipmentcnicno { get; set; }
+    public string AdminUpdateshipmentaddress { get; set; }
+    public int AdminUpdateshipmentdistrict { get; set; }
+    public int AdminUpdateshipmentupdate { get; set; }
+    public string AdminUpdateshipmentrider { get; set; }
+    public int AdminUpdateshipmentID { get; set; }
 
 
-    //public int AdminInsertScanningInwordSno { get; set; }
-    //public int AdminInsertScanningInword_Inwordno { get; set; }
-    //public int AdminInsertScanningInword_NoofRecord { get; set; }
-    //public int AdminInsertScanningInword_NewID { get; set; }
-    //public int AdminInsertScanningInword_SameID { get; set; }
-    //public int AdminInsertScanningInword_Modification { get; set; }
-    //public string AdminInsertScanningInword_Discription { get; set; }
-    //public string AdminInsertScanningInword_PicName { get; set; }
-    //public string AdminInsertScanningInword_PicPath { get; set; }
-    //public int AdminInsertScanningInword_FKCreatedby { get; set; }
-    //public int AdminInsertScanningInword_Status { get; set; }
+    //update shipment detail//
+    public DateTime AdminUpdatentryreceivedon { get; set; }
+    public int AdminUpdateentryreceivedby { get; set; }
+    public string AdminUpdateentryestimatedon { get; set; }
+    public int AdminUpdateentryshipment { get; set; }
+    public int AdminUpdateentryupdate { get; set; }
+    public string AdminUpdateentryrider { get; set; }
+    public int AdminUpdateentryID { get; set; }
 
-    // <---------------------------------------------------> //
-    public long AdminPatnerTypeRelationFetch { get; set; }
 
-    public int AdminEditPatnerFetch { get; set; }
-
-    public string AdminUpdateProfileName { get; set; }
-    public string AdminUpdateProfileGender { get; set; }
-    public string AdminUpdateProfileMartialStatus { get; set; }
-    public string AdminUpdateProfilePhone { get; set; }
-    public DateTime AdminUpdateProfileBirthday { get; set; }
-    public string AdminUpdateProfileEmail { get; set; }
-    public string AdminUpdateProfilePicName { get; set; }
-    public string AdminUpdateProfilePicPath { get; set; }
-    public int AdminUpdateProfileID { get; set; }
-    public int AdminUpdateFetchProfileID { get; set; }
+    //update user//
+    public string AdminUpdatuseremail { get; set; }
+    public int AdminUpdateuserpassword { get; set; }
+    public string AdminUpdateuserrole { get; set; }
+    public int AdminUpdateuserID { get; set; }
 
     // Patner Form Start //
     public string PatnerFormsName { get; set; }
