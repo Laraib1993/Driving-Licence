@@ -112,11 +112,11 @@ public class Insertion
             cmd.CommandText = "sp_insertreturnstep";
             cmd.Connection = Getconnected.getconnecting();
             cmd.Parameters.AddWithValue("@Returnedon", P.AdminInsertreturnerturnon);
-            cmd.Parameters.AddWithValue("@FK_Rider", P.AdminInsertreturnrider);
             cmd.Parameters.AddWithValue("@FK_Createdby", P.AdminInsertreturncreatedby);
             cmd.Parameters.AddWithValue("@FK_Shipment", P.AdminInsertreturnshipment);
             cmd.Parameters.AddWithValue("@FK_Reason", P.AdminInsertreturnreason);
             cmd.Parameters.AddWithValue("@Description", P.AdminInsertreturndisccription);
+            cmd.Parameters.AddWithValue("@FK_Rider", P.AdminInsertreturnrider);
             cmd.ExecuteNonQuery();
 
         }
@@ -151,7 +151,7 @@ public class Insertion
             cmd.Parameters.AddWithValue("@FK_District", P.AdminInsertshipmentdistrict);
             cmd.Parameters.AddWithValue("@FK_Createdby", P.AdminInsertshipmentcreatedby);
             cmd.Parameters.AddWithValue("@FK_ShipmentStatus", P.AdminInsertshipmentstatus);
-            cmd.Parameters.AddWithValue("@sp_insertshipmentdetail", P.AdminInsertshipmentrider);
+            cmd.Parameters.AddWithValue("@address", P.AdminInsertshipmentaddress);
             cmd.ExecuteNonQuery();
 
         }

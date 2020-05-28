@@ -83,13 +83,6 @@
 
 
 
-                                                             <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">CNIC</label>
-                                                                <div class="col-sm-10">
-                                                                    <input id="txtstatus" runat="server" type="text" class="form-control" name="name" placeholder="Status" />
-                                                                    <span class="messages"></span>
-                                                                </div>
-                                                            </div>
 
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2"></label>

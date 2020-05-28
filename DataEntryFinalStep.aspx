@@ -2,6 +2,17 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <title>Final Step</title>
+<script type="text/javascript">
+    function ShowHideDiv() {
+        var chkYes = document.getElementById("chkYes");
+        var chkNo = document.getElementById("chkNo");
+        var dvdelivered = document.getElementById("pnldelivered");
+        dvdelivered.style.display = chkYes.checked ? "block" : "none";
+
+        var dvdelivered = document.getElementById("pnlreturned");
+        dvdelivered.style.display = chkNo.checked ? "block" : "none";
+    }
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="pcoded-content">   
@@ -63,15 +74,18 @@
 
                                                                <div class="form-group row">
                                                                                     <div class="col-md-4 col-lg-2">
-                                                                                        <label for="University-2" class="block">Final Status</label>
+                                                                                        <label for="University-2" class="block" id="a" runat="server">Final Status</label>
                                                                                     </div>
                                                                                     <div class="col-md-8 col-lg-10 form-radio m-b-30">
+                                                                                        
+                                                         
                                                                                           
                                                                                  <div class="radio radiofill radio-default radio-inline"></div>
                                                                                 <div class="radio radiofill radio-default radio-inline"></div>
                                                                                 <div class="radio radiofill radio-success radio-inline">
                                                                                     <label>
-                                                                                        <input type="radio" name="radio" value="5"/>
+                                                                                        <input type="radio" id="chkYes" name="chkPassPort" onclick="ShowHideDiv()" value="delivered" />
+    Yes
                                                                                         <i class="helper"></i>Delivered
                                                                                     </label>
                                                                                 </div>
@@ -79,7 +93,8 @@
                                                                                 <div class="radio radiofill radio-default radio-inline"></div>
                                                                                 <div class="radio radiofill radio-danger radio-inline">
                                                                                     <label>
-                                                                                        <input type="radio" name="radio" value="6"/>
+                                                                                       <input type="radio" id="chkNo" name="chkPassPort" onclick="ShowHideDiv()" value="returned" />
+    No
                                                                                         <i class="helper"></i>Returned
                                                                                     </label>
                                                                                 </div>
@@ -91,8 +106,11 @@
                                                                                     </div>
                                                                                 </div>
 
-                                                            <asp:Panel ID="pnldelivered" runat="server" Visible="false">
+                                                            
 
+                                                           
+                                                            
+                                                            <div id="pnldelivered" style="display: none">
                                                                     <div class="form-group row">
                                                                 <div class="col-md-4 col-lg-2">
                                                                     <label for="phone-2" class="block">Delivered On</label>
@@ -101,11 +119,16 @@
                                                                     <input id="txtdelivered" runat="server"  class="form-control dropper-default" type="text" placeholder="Select date" />
                                                                 </div>
                                                             </div>
+                                                            </div>
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
 
-                                                            </asp:Panel>
 
-
-                                                          <asp:Panel ID="pnlreturned" runat="server" Visible="false">
+                                                          <div id="pnlreturned" style="display: none">
 
                                                                 <div class="form-group row">
                                                                 <div class="col-md-4 col-lg-2">
@@ -137,7 +160,7 @@
                                                                   </div>
                                                               </div>
 
-                                                            </asp:Panel>
+                                                            </div>
 
 
 

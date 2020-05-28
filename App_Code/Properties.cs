@@ -79,7 +79,7 @@ public class Properties
     public int AdminInsertshipmentdistrict { get; set; }
     public int AdminInsertshipmentcreatedby { get; set; }
     public int AdminInsertshipmentstatus { get; set; }
-    public int AdminInsertshipmentrider { get; set; }
+    public string AdminInsertshipmentaddress { get; set; }
 
 
     //insert into user//
