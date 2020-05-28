@@ -14,17 +14,18 @@ public class Dropdown
 
 
 
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_1()
+    public static List<ListItem> GetAdminDropdownfetchuserinfo(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_1";
+            cmd.CommandText = "sp_fetchuserinfo";
             cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
-                type.Add(new ListItem { Text = "Select Inword No" });
+                type.Add(new ListItem { Text = "Select Email" });
                 while (sdr.Read())
                 {
 
@@ -41,432 +42,15 @@ public class Dropdown
         }
     }
 
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_7()
+    public static List<ListItem> GetAdminDropdowncity(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_7";
+            cmd.CommandText = "sp_fetchcity";
             cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_8()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_8";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_9()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_9";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminOutwardScanningForm_InwordNo()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownOutwardHistoryInwordNo";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminOutwardScanningForm_EmployeeName()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownOutwardHistoryEmployee";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Employee Name" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminInwordForSearching()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordForSearching";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_5()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_5";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_4()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_4";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_3()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_3";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminDropdownInwordno_ShowReason_2()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownInwordno_ShowReason_2";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminProductFormPatner()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownPatnerForProduct";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Patner For New Product" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminOutward()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownOutward";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Outward" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminScanningCase_InwordNo()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownScanningCase_InwordNo";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminPatnerBranchFormCity()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownCity";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select City For New Branch" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminScanningInwordNo()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownScanningInwordNo";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-
-
-
-
-
-    public static List<ListItem> GetAdminEditPatnerFormCity()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownCity";
-            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
                 type.Add(new ListItem { Text = "Select City" });
@@ -486,23 +70,23 @@ public class Dropdown
         }
     }
 
-    public static List<ListItem> GetAdminEditPatnerFormPatner()
+
+    public static List<ListItem> GetAdminDropdowncountry(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownPartner";
+            cmd.CommandText = "sp_fetchcountry";
             cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
-                type.Add(new ListItem { Text = "Select Patner To Be Edited" });
+                type.Add(new ListItem { Text = "Select Country" });
                 while (sdr.Read())
                 {
-
                     type.Add(new ListItem
                     {
-
                         Value = sdr[0].ToString(),
                         Text = sdr[1].ToString()
                     });
@@ -513,14 +97,42 @@ public class Dropdown
         }
     }
 
-    public static List<ListItem> GetAdminDistrict()
+
+    public static List<ListItem> GetAdminDropdowndeliveredstep(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownDistrict";
+            cmd.CommandText = "sp_fetchdeliveredstep";
             cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
+            using (sdr = cmd.ExecuteReader())
+            {
+                type.Add(new ListItem { Text = "Select Shipment" });
+                while (sdr.Read())
+                {
+                    type.Add(new ListItem
+                    {
+                        Value = sdr[0].ToString(),
+                        Text = sdr[1].ToString()
+                    });
+                }
+            }
+
+            return type;
+        }
+    }
+
+    public static List<ListItem> GetAdminOutwarddistrict(Properties P)
+    {
+        using (cmd = new SqlCommand())
+        {
+            List<ListItem> type = new List<ListItem>();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_fetchdistrict";
+            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
                 type.Add(new ListItem { Text = "Select District" });
@@ -541,18 +153,18 @@ public class Dropdown
     }
 
 
-
-    public static List<ListItem> GetAdminEditCityFormCity()
+    public static List<ListItem> GetAdminOutwardongoingstep(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownCity";
+            cmd.CommandText = "sp_fetchOngoingStep";
             cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
-                type.Add(new ListItem { Text = "Select City" });
+                type.Add(new ListItem { Text = "Select Shipment" });
                 while (sdr.Read())
                 {
 
@@ -569,156 +181,22 @@ public class Dropdown
         }
     }
 
-
-
-
-
-
-    public static List<ListItem> GetAdminCountryFormRegion()
+    public static List<ListItem> GetAdminreturnreason(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownRegion";
+            cmd.CommandText = "sp_fetchreturnreason";
             cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Region" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-
-
-
-
-    public static List<ListItem> GetAdminNewIDSheet_Inwordno()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownNewID_Inwordno";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-
-
-
-
-    public static List<ListItem> GetAdminCityFormCountryName()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownCountry";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Country" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-
-
-
-
-    public static List<ListItem> GetAdminNewID_Inwordno_Case()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownNewID_Inwordno_Case";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Inword No" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-
-
-
-
-    public static List<ListItem> GetAdminReason()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownReason";
-            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
                 type.Add(new ListItem { Text = "Select Reason" });
                 while (sdr.Read())
                 {
-
                     type.Add(new ListItem
                     {
-
                         Value = sdr[0].ToString(),
                         Text = sdr[1].ToString()
                     });
@@ -729,25 +207,22 @@ public class Dropdown
         }
     }
 
-
-
-    public static List<ListItem> GetAdminTierLevelTierLevel()
+    public static List<ListItem> GetAdminDropdownrider(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownTierLevel";
+            cmd.CommandText = "sp_fetchrider";
             cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
-                type.Add(new ListItem { Text = "Select Tier Level Name To Be Edited" });
+                type.Add(new ListItem { Text = "Select Rider" });
                 while (sdr.Read())
                 {
-
                     type.Add(new ListItem
                     {
-
                         Value = sdr[0].ToString(),
                         Text = sdr[1].ToString()
                     });
@@ -758,26 +233,22 @@ public class Dropdown
         }
     }
 
-
-
-
-    public static List<ListItem> GetAdminTierLevelDistributerFk_TierLevel()
+    public static List<ListItem> GetAdminDropdownshipmentdetail(Properties P )
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownTierLevelDistributerFK_TierLevel";
+            cmd.CommandText = "sp_fetchshipmentdetail";
             cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
-                type.Add(new ListItem { Text = "Select Tier Level" });
+                type.Add(new ListItem { Text = "Select Shipment" });
                 while (sdr.Read())
                 {
-
                     type.Add(new ListItem
                     {
-
                         Value = sdr[0].ToString(),
                         Text = sdr[1].ToString()
                     });
@@ -788,26 +259,22 @@ public class Dropdown
         }
     }
 
-
-
-
-    public static List<ListItem> GetAdminTierLevelDistributerFk_Distributer()
+    public static List<ListItem> GetAdminDropdownshipmententry(Properties P)
     {
         using (cmd = new SqlCommand())
         {
             List<ListItem> type = new List<ListItem>();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownTierLevelDistributerFK_Distributer";
+            cmd.CommandText = "sp_fetchshipmententry";
             cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@id", P.AdminFetchID);
             using (sdr = cmd.ExecuteReader())
             {
-                type.Add(new ListItem { Text = "Select Distributer" });
+                type.Add(new ListItem { Text = "Select Shipment" });
                 while (sdr.Read())
                 {
-
                     type.Add(new ListItem
                     {
-
                         Value = sdr[0].ToString(),
                         Text = sdr[1].ToString()
                     });
@@ -818,122 +285,7 @@ public class Dropdown
         }
     }
 
-
-
-
-
-    public static List<ListItem> GetAdminTierLevelDistributerForEdit()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownTierLevelDistributerForEdit";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Distributer For Edit" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-    public static List<ListItem> GetAdminDepartment()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownDepartment";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Department" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-    public static List<ListItem> GetAdminProductPatnerRelationshipForProduct()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownProductPatnerRealtionship";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Product" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
-
-
-
-    public static List<ListItem> GetAdminProductPatnerRelationshipForPatner()
-    {
-        using (cmd = new SqlCommand())
-        {
-            List<ListItem> type = new List<ListItem>();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_AdminDropdownDistributerOrReseller";
-            cmd.Connection = Getconnected.getconnecting();
-            using (sdr = cmd.ExecuteReader())
-            {
-                type.Add(new ListItem { Text = "Select Patner" });
-                while (sdr.Read())
-                {
-
-                    type.Add(new ListItem
-                    {
-
-                        Value = sdr[0].ToString(),
-                        Text = sdr[1].ToString()
-                    });
-                }
-            }
-
-            return type;
-        }
-    }
-
+  
 
 
 }

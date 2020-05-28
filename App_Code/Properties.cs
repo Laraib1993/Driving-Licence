@@ -184,52 +184,9 @@ public class Properties
     public string AdminUpdateuserrole { get; set; }
     public int AdminUpdateuserID { get; set; }
 
-    // Patner Form Start //
-    public string PatnerFormsName { get; set; }
-    public string PatnerFormsAddress { get; set; }
-    public string PatnerFormsEmail { get; set; }
-    public string PatnerFormsPhone { get; set; }
-    public string PatnerFormsContactPersonname { get; set; }
-    public string PatnerFormsContactPersonEmail { get; set; }
-    public string PatnerFormsContactPersonPhone { get; set; }
-    public string PatnerFormsWebsite { get; set; }
-    public string PatnerFormsPostalcode { get; set; }
-    public string PatnerFormsAunnualRevenue { get; set; }
-    public string PatnerFormsCompanysize { get; set; }
-    public string PatnerFormsLogoName { get; set; }
-    public string PatnerFormsLogoPath { get; set; }
-    public int PatnerFormsPatnerType { get; set; }
-    public long PatnerFormsCity { get; set; }
-    public int PatnerFormsStatus { get; set; }
-    public int PatnerFormsCreatedby { get; set; }
-    public string A { get; set; }
-    public string B { get; set; }
-    public string C { get; set; }
-    public byte[] picdata { get; set; }
-    // Patner Form  End //
-
-
-    //public string AdminInsertProductServiceService { get; set; }
-    //public string AdminInsertProductServiceDetail { get; set; }
-    //public int AdminInsertProductServiceFK_Createdby { get; set; }
-    //public int AdminInsertProductServiceFK_Status { get; set; }
-    //public string AdminInsertProductServicePic_Name { get; set; }
-    //public string AdminInsertProductServicePic_Path { get; set; }
-
-
-    public string AdminInsertCountryFormCountry { get; set; }
-    public int AdminInsertCountryFormFKCreatedby { get; set; }
-    public int AdminInsertCountryFormFKRegion { get; set; }
-    public int AdminInsertCountryFormFKStatus { get; set; }
-
-
-
-
-    public string AdminInsertCityFormCity { get; set; }
-    public int AdminInsertCityFormFKCreatedby { get; set; }
-    public int AdminInsertCityFormFKStatus { get; set; }
-    public int AdminInsertCityFormFKCountryName { get; set; }
-
+    // Dropdown //
+    public int AdminFetchID { get; set; }
+    
 
 
 
