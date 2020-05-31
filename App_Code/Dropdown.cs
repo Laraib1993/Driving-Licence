@@ -285,7 +285,170 @@ public class Dropdown
         }
     }
 
-  
 
+    public static List<ListItem> GetSprintDashboardDropdownCountryName()
+    {
+        using (cmd = new SqlCommand())
+        {
+            List<ListItem> type = new List<ListItem>();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_SprintDashboardDropdownCountryName";
+            cmd.Connection = Getconnected.getconnecting();
+            using (sdr = cmd.ExecuteReader())
+            {
+                type.Add(new ListItem { Text = "Select Country Name" });
+                while (sdr.Read())
+                {
+
+                    type.Add(new ListItem
+                    {
+
+                        Value = sdr[0].ToString(),
+                        Text = sdr[1].ToString()
+                    });
+                }
+            }
+
+            return type;
+        }
+    }
+
+
+    public static List<ListItem> GetSprintDashboardDropdownCityName()
+    {
+        using (cmd = new SqlCommand())
+        {
+            List<ListItem> type = new List<ListItem>();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_SprintDashboardDropdownCityName";
+            cmd.Connection = Getconnected.getconnecting();
+            using (sdr = cmd.ExecuteReader())
+            {
+                type.Add(new ListItem { Text = "Select City Name" });
+                while (sdr.Read())
+                {
+
+                    type.Add(new ListItem
+                    {
+
+                        Value = sdr[0].ToString(),
+                        Text = sdr[1].ToString()
+                    });
+                }
+            }
+
+            return type;
+        }
+    }
+
+
+    public static List<ListItem> GetSprintDashboardDropdownDistrictName()
+    {
+        using (cmd = new SqlCommand())
+        {
+            List<ListItem> type = new List<ListItem>();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_SprintDashboardDropdownDistrictName";
+            cmd.Connection = Getconnected.getconnecting();
+            using (sdr = cmd.ExecuteReader())
+            {
+                type.Add(new ListItem { Text = "Select District Name" });
+                while (sdr.Read())
+                {
+
+                    type.Add(new ListItem
+                    {
+
+                        Value = sdr[0].ToString(),
+                        Text = sdr[1].ToString()
+                    });
+                }
+            }
+
+            return type;
+        }
+    }
+
+
+    public static List<ListItem> GetSprintDashboardDropdownUserE_Mail()
+    {
+        using (cmd = new SqlCommand())
+        {
+            List<ListItem> type = new List<ListItem>();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_SprintDashboardDropdownE_Mail";
+            cmd.Connection = Getconnected.getconnecting();
+            using (sdr = cmd.ExecuteReader())
+            {
+                type.Add(new ListItem { Text = "Select E-Mail" });
+                while (sdr.Read())
+                {
+
+                    type.Add(new ListItem
+                    {
+
+                        Value = sdr[0].ToString(),
+                        Text = sdr[1].ToString()
+                    });
+                }
+            }
+
+            return type;
+        }
+    }
+
+    public static List<ListItem> GetSprintDashboardDropdownRiderName()
+    {
+        using (cmd = new SqlCommand())
+        {
+            List<ListItem> type = new List<ListItem>();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_SprintDashboardDropdownRiderName";
+            cmd.Connection = Getconnected.getconnecting();
+            using (sdr = cmd.ExecuteReader())
+            {
+                type.Add(new ListItem { Text = "Select Rider's Name" });
+                while (sdr.Read())
+                {
+
+                    type.Add(new ListItem
+                    {
+
+                        Value = sdr[0].ToString(),
+                        Text = sdr[1].ToString()
+                    });
+                }
+            }
+
+            return type;
+        }
+    }
+
+    public static List<ListItem> GetSprintDashboardDropdownReturnReason()
+    {
+        using (cmd = new SqlCommand())
+        {
+            List<ListItem> type = new List<ListItem>();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_SprintDashboardDropdownReturnReason";
+            cmd.Connection = Getconnected.getconnecting();
+            using (sdr = cmd.ExecuteReader())
+            {
+                type.Add(new ListItem { Text = "Select Reason" });
+                while (sdr.Read())
+                {
+
+                    type.Add(new ListItem
+                    {
+
+                        Value = sdr[0].ToString(),
+                        Text = sdr[1].ToString()
+                    });
+                }
+            }
+
+            return type;
+        }
+    }
 
 }
