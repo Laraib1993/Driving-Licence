@@ -186,11 +186,37 @@ public class Properties
 
     // Dropdown //
     public int AdminFetchID { get; set; }
-    
 
 
 
-    // Insertion Area End //
+
+    // sprint dashboard area start //
+
+    //insertion start//
+    public string SprintInsertCountry_CountryName { get; set; }
+    public int SprintInsertCountry_FK_Createdby { get; set; }
+
+    public string SprintInsertCity_CityName { get; set; }
+    public int SprintInsertCity_FK_Createdby { get; set; }
+
+    public string SprintInsertDistrict_DistrictName { get; set; }
+    public int SprintInsertDistrict_FK_Createdby { get; set; }
+
+    public string SprintInsertUserInfo_email { get; set; }
+    public string SprintInsertUserInfo_Password { get; set; }
+    public string SprintInsertUserInfo_Role { get; set; }
+
+    public string SprintInsertRider_RiderName { get; set; }
+    public string SprintInsertRider_CNIC { get; set; }
+    public string SprintInsertRider_Address { get; set; }
+    public string SprintInsertRider_Phone { get; set; }
+    public int SprintInsertRider_FK_Createdby { get; set; }
+
+    public string SprintInsertReturnReason_Reason { get; set; }
+    public int SprintInsertReturnReason_FK_Createdby { get; set; }
+    //insertion end//
+
+    // sprint dashboard area end //
 
 
 
@@ -210,7 +236,7 @@ public class Properties
     // <---------------------------------------------------> //
 
 
-    
+
 
     // <---------------------------------------------------> //
 
