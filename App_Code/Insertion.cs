@@ -191,5 +191,87 @@ public class Insertion
         }
     }
 
-   
+    // sprint dashboard area start //
+    public void SprintInsertCountry(Properties P)
+    {
+        using (cmd = new SqlCommand())
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_insertcountry";
+            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@Country", P.AdminInsertcountrycountry);
+            cmd.Parameters.AddWithValue("@FK_Createdon", P.SprintInsertCountry_FK_Createdby);
+            cmd.ExecuteNonQuery();
+        }
+    }
+
+    public void SprintInsertCity(Properties P)
+    {
+        using (cmd = new SqlCommand())
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_insertcity";
+            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@City", P.SprintInsertCity_CityName);
+            cmd.Parameters.AddWithValue("@FK_Createdon", P.SprintInsertCity_FK_Createdby);
+            cmd.ExecuteNonQuery();
+        }
+    }
+
+    public void SprintInsertDistrict(Properties P)
+    {
+        using (cmd = new SqlCommand())
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_insertdistrict";
+            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@District", P.SprintInsertDistrict_DistrictName);
+            cmd.Parameters.AddWithValue("@FK_Createdon", P.SprintInsertDistrict_FK_Createdby);
+            cmd.ExecuteNonQuery();
+        }
+    }
+
+    public void SprintInsertUserInfo(Properties P)
+    {
+        using (cmd = new SqlCommand())
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_insertuser";
+            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@email", P.SprintInsertUserInfo_email);
+            cmd.Parameters.AddWithValue("@password", P.SprintInsertUserInfo_Password);
+            cmd.Parameters.AddWithValue("@role", P.SprintInsertUserInfo_Role);
+            cmd.ExecuteNonQuery();
+        }
+    }
+
+    public void SprintInsertRider(Properties P)
+    {
+        using (cmd = new SqlCommand())
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_insertrider";
+            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@rider", P.SprintInsertRider_RiderName);
+            cmd.Parameters.AddWithValue("@cnic", P.SprintInsertRider_CNIC);
+            cmd.Parameters.AddWithValue("@address", P.SprintInsertRider_Address);
+            cmd.Parameters.AddWithValue("@phone", P.SprintInsertRider_Phone);
+            cmd.Parameters.AddWithValue("@FK_Createdon", P.SprintInsertRider_FK_Createdby);
+            cmd.ExecuteNonQuery();
+        }
+    }
+
+    public void SprintInsertReturnReason(Properties P)
+    {
+        using (cmd = new SqlCommand())
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_insertreturnreason";
+            cmd.Connection = Getconnected.getconnecting();
+            cmd.Parameters.AddWithValue("@Reason", P.SprintInsertReturnReason_Reason);
+            cmd.Parameters.AddWithValue("@FK_Createdon", P.SprintInsertReturnReason_FK_Createdby);
+            cmd.ExecuteNonQuery();
+        }
+    }
+    // sprint dashboard area end //
 }
